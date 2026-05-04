@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import { SectionFrame, SectionHeading } from './SectionFrame';
 
 const stats = [
-  { label: 'Years Experience', value: '5+' },
-  { label: 'Projects Completed', value: '25+' },
-  { label: 'Technologies', value: '18' },
-  { label: 'Certifications', value: '6' },
+  { label: 'Years Experience', value: '1+' },
+  { label: 'Projects Completed', value: '5+' },
+  { label: 'Technologies', value: '25' },
+  { label: 'Certifications', value: '8' },
 ];
 
 export default function About() {
@@ -14,48 +14,50 @@ export default function About() {
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="About"
-          title="A person who builds to understand, not just to complete"
-          description="This portfolio is structured to communicate technical breadth, execution quality, and professional polish at a glance."
+          title="A person who builds to understand, not just to complete."
+          description="Still learning. Always building."
         />
 
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
           <motion.div
             variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }}
-            className="rounded-[2rem] border border-deep bg-secondary p-6 shadow-glow"
+            className="space-y-6 text-text-base/74"
           >
-            <div className="flex min-h-[24rem] items-center justify-center rounded-[1.5rem] border border-card bg-card">
-              <div className="flex h-40 w-40 items-center justify-center rounded-[1.5rem] border border-accent/35 bg-primary text-5xl font-bold text-accent">
-                AM
-              </div>
-            </div>
+            <p className="text-lg leading-8 text-text-base/82">
+            Pre-Final Year Computer Science student at Symbiosis Institute of Technology, 
+            driven by a genuine curiosity for how systems work — not just how to make 
+            them run, but why they're built the way they are.
+
+            </p>
+            <p className="text-lg leading-8 text-text-base/74">
+            I spend my time writing code in C++, Python, and Java, working through 
+            data structures, algorithms, and system-level problems that push me to 
+            think clearly and build deliberately. Every project I take on is an 
+            opportunity to connect theory with something tangible.
+            </p>
+            <p className="text-lg leading-8 text-text-base/74">
+            Outside the classroom, hackathons have been my most valuable classroom, 
+            fast-paced, collaborative, and honest about where your skills actually 
+            stand. They've shaped how I approach problems, work in teams, and 
+            deliver under pressure.
+            </p>
+            <p className="text-lg leading-8 text-text-base/74">
+            I am focused on mastering the fundamentals, systems, 
+            algorithms, and clean code because strong foundations 
+            are what separate engineers who adapt from those who don't.
+            </p>
           </motion.div>
 
-          <div className="space-y-6 text-text-base/74">
-            <p className="text-lg leading-8 text-text-base/82">
-              I build interfaces and application layers with a strong bias toward clarity,
-              maintainability, and visual consistency. My work is grounded in implementation detail,
-              but always shaped around the person who will use the product.
-            </p>
-            <p className="text-lg leading-8 text-text-base/74">
-              I enjoy taking projects from rough ideas to production-ready systems with defined
-              structure, predictable components, and a presentation layer that can stand up in a
-              recruiting or client review setting.
-            </p>
-            <p className="text-lg leading-8 text-text-base/74">
-              Across product pages, dashboards, and internal tools, I focus on clean interactions,
-              accessible layout decisions, and engineering patterns that support long-term scaling.
-            </p>
-            <p className="text-lg leading-8 text-text-base/74">
-              The result is work that reads well to hiring teams while still being practical for
-              day-to-day development, collaboration, and iteration.
-            </p>
-
-            <div className="grid gap-4 pt-4 sm:grid-cols-2 xl:grid-cols-4">
+          <motion.div
+            variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }}
+            className="rounded-[2rem] border border-deep bg-secondary/40 p-5 shadow-glow lg:h-full"
+          >
+            <div className="grid h-full gap-4 sm:grid-cols-2 sm:auto-rows-fr">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
                   variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
-                  className={`rounded-2xl border border-deep p-5 ${
+                  className={`flex h-full flex-col items-center justify-center rounded-2xl border border-deep p-5 text-center ${
                     index % 2 === 0 ? 'bg-secondary' : 'bg-card'
                   }`}
                 >
@@ -64,7 +66,7 @@ export default function About() {
                 </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </SectionFrame>
