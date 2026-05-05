@@ -8,6 +8,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Certifications from './components/Certifications';
+import Publication from './components/Publication';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -45,6 +46,7 @@ function HomePage() {
         <Projects />
         <Education />
         <Certifications />
+        <Publication />
         <Contact />
       </main>
       <Footer />
