@@ -5,12 +5,12 @@ import { SectionFrame, SectionHeading } from './SectionFrame';
 
 const contactCards = [
   { icon: Mail, label: 'Email', value: 'shayan.bhowmik05@gmail.com' },
-  { icon: Phone, label: 'Phone', value: '+1 (555) 014-2026' },
-  { icon: MapPin, label: 'Location', value: 'New York, NY' },
+  { icon: Phone, label: 'Phone', value: '+91 - 9835116087' },
+  { icon: MapPin, label: 'Location', value: 'India' },
 ];
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', company: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
@@ -46,7 +46,7 @@ export default function Contact() {
     }
 
     setSubmitted(true);
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setFormData({ name: '', email: '', message: '' });
     setErrors({});
   };
 
@@ -55,11 +55,11 @@ export default function Contact() {
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Contact"
-          title="Reach out for roles, collaborations, or project discussions"
-          description="The form is validated locally and the contact details are surfaced clearly for direct outreach."
+          title="Open to Opportunities and Conversations"
+          description="Whether it's an internship, a collaboration, or just a conversation about tech — my inbox is always open."
         />
 
-        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="grid gap-6">
           <div className="space-y-4">
             <motion.div
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
@@ -84,105 +84,11 @@ export default function Contact() {
                 })}
               </div>
 
-              <div className="mt-6 flex items-center gap-3">
-                <a
-                  href="https://github.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="GitHub profile"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-accent bg-accent text-white transition-colors duration-300 hover:bg-accent/90"
-                >
-                  <Github size={18} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="LinkedIn profile"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-accent bg-accent text-white transition-colors duration-300 hover:bg-accent/90"
-                >
-                  <Linkedin size={18} />
-                </a>
-                <a
-                  href="mailto:shayan.bhowmik05@gmail.com"
-                  aria-label="Send email"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-accent bg-accent text-white transition-colors duration-300 hover:bg-accent/90"
-                >
-                  <Mail size={18} />
-                </a>
-              </div>
+              {/* Social links removed per user request */}
             </motion.div>
           </div>
-
-          <motion.form
-            onSubmit={handleSubmit}
-            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-            className="rounded-[1.75rem] border border-deep bg-secondary p-6 shadow-[0_20px_50px_rgba(0,0,0,0.16)] lg:p-8"
-            noValidate
-          >
-            <div className="grid gap-5 sm:grid-cols-2">
-              <Field label="Name" name="name" value={formData.name} onChange={handleChange} error={errors.name} />
-              <Field label="Email" name="email" type="email" value={formData.email} onChange={handleChange} error={errors.email} />
-            </div>
-
-            <div className="mt-5">
-              <Field label="Company" name="company" value={formData.company} onChange={handleChange} optional />
-            </div>
-
-            <div className="mt-5">
-              <label className="mb-2 block text-sm font-medium text-text-base/80" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows="7"
-                value={formData.message}
-                onChange={handleChange}
-                className={`w-full rounded-2xl border bg-card px-4 py-3 text-base text-text-base outline-none transition-colors duration-200 placeholder:text-text-base/30 focus:border-accent ${
-                  errors.message ? 'border-red-400' : 'border-deep'
-                }`}
-                placeholder="Describe the role, project, or timeline you have in mind."
-              />
-              {errors.message ? <p className="mt-2 text-sm text-red-300">{errors.message}</p> : null}
-            </div>
-
-            {submitted ? (
-              <p className="mt-5 rounded-2xl border border-accent/35 bg-accent/10 px-4 py-3 text-sm text-text-base">
-                Message prepared successfully. Replace this placeholder with your preferred form
-                backend or mail service.
-              </p>
-            ) : null}
-
-            <button
-              type="submit"
-              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5 hover:bg-accent/90"
-            >
-              Send Message
-              <Send size={18} />
-            </button>
-          </motion.form>
         </div>
       </div>
     </SectionFrame>
-  );
-}
-
-function Field({ label, optional = false, error, ...props }) {
-  return (
-    <div>
-      <label className="mb-2 block text-sm font-medium text-text-base/80" htmlFor={props.name}>
-        {label}
-        {optional ? <span className="ml-2 text-text-base/45">Optional</span> : null}
-      </label>
-      <input
-        {...props}
-        id={props.name}
-        className={`w-full rounded-2xl border bg-card px-4 py-3 text-base text-text-base outline-none transition-colors duration-200 placeholder:text-text-base/30 focus:border-accent ${
-          error ? 'border-red-400' : 'border-deep'
-        }`}
-      />
-      {error ? <p className="mt-2 text-sm text-red-300">{error}</p> : null}
-    </div>
   );
 }

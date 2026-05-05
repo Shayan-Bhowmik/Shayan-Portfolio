@@ -1,9 +1,19 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Code } from 'lucide-react';
+
+function MediumIcon({ size = 18 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <text x="50%" y="52%" fill="currentColor" fontSize="18" fontWeight="900" fontFamily="Arial, Helvetica, sans-serif" textAnchor="middle" dominantBaseline="central">M</text>
+    </svg>
+  );
+}
 
 const socials = [
-  { label: 'GitHub', href: 'https://github.com/', icon: Github },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/', icon: Linkedin },
+  { label: 'GitHub', href: 'https://github.com/Shayan-Bhowmik', icon: Github },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/shayan-bhowmik-227808321/', icon: Linkedin },
   { label: 'Email', href: 'mailto:shayan.bhowmik05@gmail.com', icon: Mail },
+  { label: 'Medium', href: 'https://medium.com/@shayan.bhowmik', icon: MediumIcon },
+  { label: 'LeetCode', href: 'https://leetcode.com/u/Shayan_Bhowmik/', icon: Code },
 ];
 
 export default function Footer() {

@@ -7,6 +7,9 @@ const links = [
   { label: 'Skills', href: '#skills', id: 'skills' },
   { label: 'Experience', href: '#experience', id: 'experience' },
   { label: 'Projects', href: '#projects', id: 'projects' },
+  { label: 'Education', href: '#education', id: 'education' },
+  { label: 'Certifications', href: '#certifications', id: 'certifications' },
+  { label: 'Articles', href: '#publications', id: 'publications' },
   { label: 'Contact', href: '#contact', id: 'contact' },
 ];
 
@@ -23,42 +26,95 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Fallback scroll handler: pick section nearest the viewport center
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // Find the section with the highest intersection ratio
-        let maxRatio = 0;
-        let maxEntry = null;
+    let ticking = false;
 
-        entries.forEach((entry) => {
-          if (entry.intersectionRatio > maxRatio) {
-            maxRatio = entry.intersectionRatio;
-            maxEntry = entry;
+    const ids = links.map((l) => l.id);
+    const getElements = () => ids.map((id) => document.getElementById(id)).filter(Boolean);
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+
+      requestAnimationFrame(() => {
+        const elems = getElements();
+        if (elems.length === 0) {
+          ticking = false;
+          return;
+        }
+
+        const center = window.innerHeight * 0.5;
+        let best = null;
+        let bestDist = Infinity;
+
+        elems.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          const dist = Math.abs(rect.top - center);
+          if (dist < bestDist) {
+            bestDist = dist;
+            best = el;
           }
         });
 
-        // Only update if we found an intersecting section
-        if (maxEntry && maxEntry.intersectionRatio > 0) {
-          setActiveSection(maxEntry.target.id);
+        if (best && best.id !== activeSection) setActiveSection(best.id);
+        ticking = false;
+      });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    // run once to initialize
+    onScroll();
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [activeSection]);
+
+  useEffect(() => {
+    // Use IntersectionObserver to update active nav when sections enter the viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // pick the most visible intersecting entry (by intersectionRatio),
+        // fallback to closest to top if ratios are equal
+        const intersecting = entries.filter((e) => e.isIntersecting);
+
+        if (intersecting.length > 0) {
+          intersecting.sort((a, b) => {
+            if (b.intersectionRatio !== a.intersectionRatio) return b.intersectionRatio - a.intersectionRatio;
+            return Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top);
+          });
+
+          const best = intersecting[0];
+          setActiveSection(best.target.id);
         }
       },
-      {
-        root: null,
-        rootMargin: '-40% 0px -55% 0px',
-        threshold: [0, 0.25, 0.5, 0.75, 1],
-      },
+      { root: null, rootMargin: '-40% 0px -55% 0px', threshold: 0 },
     );
 
+    // Observe each declared link id and common singular/plural variants
+    const observed = new Set();
+
     links.forEach((link) => {
-      const element = document.getElementById(link.id);
-      if (element) {
-        observer.observe(element);
-      }
+      const candidates = [link.id];
+
+      // try singular/plural variants to handle naming mismatches
+      if (link.id.endsWith('s')) candidates.push(link.id.replace(/s$/, ''));
+      else candidates.push(`${link.id}s`);
+
+      // explicit alias for publications <-> articles
+      if (link.id === 'publications') candidates.push('articles');
+      if (link.id === 'articles') candidates.push('publications');
+
+      candidates.forEach((id) => {
+        if (observed.has(id)) return;
+        const el = document.getElementById(id);
+        if (el) {
+          observer.observe(el);
+          observed.add(id);
+        }
+      });
     });
 
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
 
   const handleNavClick = (id) => {
