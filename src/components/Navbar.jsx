@@ -77,7 +77,7 @@ export default function Navbar() {
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <a href="#home" onClick={() => handleNavClick('home')} className="group inline-flex items-center gap-3">
           <span className="flex h-10 w-10 items-center justify-center rounded-full border border-deep bg-primary text-sm font-bold text-accent transition-transform duration-300 group-hover:scale-105">
-            AM
+            SB
           </span>
           <div className="flex flex-col leading-tight">
             <span className="text-base font-semibold tracking-wide text-text-base">Shayan Bhowmik</span>

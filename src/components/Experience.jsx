@@ -4,36 +4,53 @@ import { SectionFrame, SectionHeading } from './SectionFrame';
 
 const experiences = [
   {
-    company: 'Northstar Labs',
-    role: 'Senior AIML Engineer',
-    period: '2023 - Present',
-    location: 'Remote',
+    company: 'GirlScript Summer of Code',
+    role: ['Contributor', 'Ambassador'],
+    period: 'Apr 2026 - Present',
+    location: 'Full-Time',
     points: [
-      'Led delivery of client-facing product interfaces with a polished, recruiter-ready visual standard.',
-      'Partnered with design and backend teams to reduce UI inconsistency and tighten handoff quality.',
-      'Improved maintainability by consolidating reusable components and shared interaction patterns.',
+      'Open Source Engineering: Actively contributing to high-impact projects by auditing codebases for vulnerabilities, proposing architectural enhancements, and delivering optimized pull requests.',
+      'Community Leadership: Serving as an official Ambassador to cultivate a robust open-source culture, providing technical mentorship to first-time contributors, and strategically expanding the GSSoC community footprint.',
     ],
   },
   {
-    company: 'Aperture Systems',
-    role: 'Frontend Engineer',
-    period: '2021 - 2023',
-    location: 'New York, NY',
+    company: 'Nexus Spring of Code',
+    role: 'Contributor',
+    period: 'Apr 2026 - Present',
+    location: 'Full-Time',
     points: [
-      'Built responsive dashboards and marketing pages that supported sales and operations workflows.',
-      'Standardized component behavior across products to improve consistency and release confidence.',
-      'Worked closely with QA and product stakeholders to close visual and functional gaps before launch.',
+      'System Architecture & Development: Contributing to the core architecture of open-source projects by implementing scalable features and optimizing existing codebase performance.',
+      'Quality Assurance: Streamlining project reliability through detailed code reviews, comprehensive bug tracking, and the integration of robust testing protocols.',
     ],
   },
   {
-    company: 'Elevate Studio',
-    role: 'Software Engineer',
-    period: '2019 - 2021',
-    location: 'Austin, TX',
+    company: 'Symbiosis Quantum Club',
+    role: 'Research & Technical Team Member',
+    period: 'Sep 2025 - Present',
+    location: 'Full-Time',
     points: [
-      'Delivered modular web features for small business clients with emphasis on accessibility and speed.',
-      'Integrated external services and APIs while keeping code paths predictable and testable.',
-      'Supported content-driven sites and internal tools with a strong focus on long-term upkeep.',
+      'Quantum Algorithm Analysis: Investigating the mechanics and real-world implications of Shor\'s and Grover\'s algorithms, specifically focusing on their impact on modern cryptographic standards.',
+      'Cryptographic Resilience: Developing simulations to evaluate the vulnerability of classical systems like RSA and SHA-256 against quantum-driven attacks.',
+    ],
+  },
+  {
+    company: 'Google Developer Student Club',
+    role: 'Student Contributor',
+    period: 'Sep 2025 - Present',
+    location: 'Full-Time',
+    points: [
+      'Algorithmic Excellence: Solving complex data structure and algorithm challenges to sharpen technical efficiency and logical reasoning.',
+      'Logic Optimization: Implementing efficient solutions for advanced problems on platforms like HackerRank and LeetCode.',
+    ],
+  },
+  {
+    company: 'Cyber Blockchain Club',
+    role: 'Technical Volunteer',
+    period: 'Aug 2025 - Present',
+    location: 'Full-Time',
+    points: [
+      'Decentralized Systems Advocacy: Contributing to the growth of the blockchain ecosystem by facilitating technical workshops and community initiatives that promote the adoption of decentralized technologies.',
+      'First-Principles Implementation: Leading hands-on sessions specifically focused on the fundamental mechanics of blockchain, including peer-to-peer networking and the logic behind decentralized ledgers.',
     ],
   },
 ];
@@ -44,9 +61,8 @@ export default function Experience() {
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Experience"
-          title="A concise timeline of production-focused delivery"
-          description="Each role highlights execution, collaboration, and the ability to ship reliable interface work at team scale."
-        />
+          title="Building Experience One Step at a Time"
+          description="A Timeline of Academic, Collaborative, and Hands-On Experiences that have shaped How I Think, Code, and Work With Others."/>
 
         <div className="relative space-y-8 pl-6 before:absolute before:bottom-0 before:left-2 before:top-2 before:w-px before:bg-card lg:pl-10">
           {experiences.map((experience) => (
@@ -59,14 +75,16 @@ export default function Experience() {
               <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <p className="text-sm uppercase tracking-[0.22em] text-accent">{experience.company}</p>
-                  <h3 className="mt-2 text-2xl font-semibold text-text-base">{experience.role}</h3>
+                  <h3 className="mt-2 text-2xl font-semibold text-text-base">
+                    {Array.isArray(experience.role) ? experience.role.join(' & ') : experience.role}
+                  </h3>
                 </div>
-                <div className="space-y-2 text-sm text-text-base/64 sm:text-right">
-                  <div className="inline-flex items-center gap-2 sm:justify-end">
+                <div className="flex flex-col gap-3 text-sm text-text-base/64 sm:items-end">
+                  <div className="flex items-center gap-2">
                     <CalendarDays size={16} className="text-accent" />
                     <span>{experience.period}</span>
                   </div>
-                  <div className="inline-flex items-center gap-2 sm:justify-end">
+                  <div className="flex items-center gap-2">
                     <MapPin size={16} className="text-accent" />
                     <span>{experience.location}</span>
                   </div>

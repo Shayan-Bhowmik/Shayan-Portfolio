@@ -4,7 +4,7 @@ import { SectionFrame, SectionHeading } from './SectionFrame';
 const stats = [
   { label: 'Years Experience', value: '1+' },
   { label: 'Projects Completed', value: '5+' },
-  { label: 'Technologies', value: '25' },
+  { label: 'Technologies', value: '25+' },
   { label: 'Certifications', value: '8' },
 ];
 
