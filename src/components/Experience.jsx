@@ -1,8 +1,19 @@
-import { CalendarDays, MapPin } from 'lucide-react';
+import { CalendarDays, Briefcase } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SectionFrame, SectionHeading } from './SectionFrame';
 
 const experiences = [
+  {
+    company: 'Google',
+    role: ['Student Ambassador'],
+    period: 'May 2026 - Present',
+    location: 'Internship ',
+    points: [
+      'Represented Google Gemini on campus by promoting Google products, tools, and developer programs to the student community at SIT.',
+      'Campus representative for Google Gemini, driving awareness of developer tools, programs, and initiatives among students.',
+      'Promoted Google developer ecosystem on campus, organizing events and engaging the student tech community.'
+    ],
+  },
   {
     company: 'GirlScript Summer of Code',
     role: ['Contributor', 'Ambassador'],
@@ -85,7 +96,7 @@ export default function Experience() {
                     <span>{experience.period}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <MapPin size={16} className="text-accent" />
+                    <Briefcase size={16} className="text-accent" />
                     <span>{experience.location}</span>
                   </div>
                 </div>
