@@ -81,7 +81,7 @@ export default function Navbar() {
           </span>
           <div className="flex flex-col leading-tight">
             <span className="text-base font-semibold tracking-wide text-text-base">Shayan Bhowmik</span>
-            <span className="text-xs uppercase tracking-[0.3em] text-text-base/60">AIML Engineer</span>
+            <span className="text-xs uppercase tracking-[0.3em] text-text-base/60">AI Engineer</span>
           </div>
         </a>
 

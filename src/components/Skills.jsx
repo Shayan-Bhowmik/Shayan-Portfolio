@@ -4,7 +4,7 @@ import { SectionFrame, SectionHeading } from './SectionFrame';
 const skills = [
   {
     title: 'Frontend',
-    items: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    items: ['React', 'TypeScript', 'Vite', 'CSS', 'Tailwind CSS'],
   },
   {
     title: 'Backend',
