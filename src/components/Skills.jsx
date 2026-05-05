@@ -4,20 +4,29 @@ import { SectionFrame, SectionHeading } from './SectionFrame';
 const skills = [
   {
     title: 'Frontend',
-    items: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Accessibility', 'Redux Toolkit'],
+    items: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
   },
   {
     title: 'Backend',
-    items: ['Node.js', 'Express', 'REST APIs', 'GraphQL', 'Authentication', 'Microservices', 'Testing'],
+    items: ['Node.js', 'FLask', 'C#', 'Express.js', 'Java'],
   },
   {
     title: 'Tools & DevOps',
-    items: ['Git', 'GitHub Actions', 'Docker', 'CI/CD', 'Vercel', 'Postman', 'Figma'],
+    items: ['Git', 'GitHub', 'Vercel', 'Postman', 'Figma', 'Canva', 'VS Code', 'Notion'],
   },
   {
     title: 'Databases',
-    items: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Prisma', 'Supabase'],
+    items: ['PostgreSQL', 'MongoDB', 'MySQL', 'Supabase'],
   },
+  {
+    title: 'AI Engineering',
+    items: ['Python', 'PyTorch', 'OpenCV', 'Numpy', 'Pandas', 'Matplotlib', 'Scikit-learn'],
+  },
+  {
+    title: 'Other Skills',
+    items: ['Quantum Computation', 'Blockchain', 'Linux', 'System Design', 'Open-Source'],
+  },
+  
 ];
 
 export default function Skills() {
@@ -26,9 +35,8 @@ export default function Skills() {
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Skills"
-          title="A broad stack organized by delivery layer"
-          description="The stack is grouped the way engineering teams actually work so each capability is easy to scan and evaluate."
-        />
+          title="A Growing Stack Built Through Practice and Curiosity"
+          description="Skills developed through real projects, academic work, and self-driven exploration across systems and software."/>
 
         <div className="grid gap-6 lg:grid-cols-2">
           {skills.map((group) => (

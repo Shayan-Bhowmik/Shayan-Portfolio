@@ -14,7 +14,7 @@ export default function About() {
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="About"
-          title="A person who builds to understand, not just to complete."
+          title="A Person Who Builds to Understand, Not Just to Complete."
           description="Still learning. Always building."
         />
 
