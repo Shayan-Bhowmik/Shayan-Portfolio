@@ -20,7 +20,7 @@ const skills = [
   },
   {
     title: 'AI Engineering',
-    items: ['Python', 'PyTorch', 'OpenCV', 'Numpy', 'Pandas', 'Matplotlib', 'Scikit-learn'],
+    items: ['Python', 'PyTorch', 'Numpy', 'Pandas', 'Matplotlib', 'Scikit-learn'],
   },
   {
     title: 'Other Skills',
