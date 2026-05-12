@@ -16,12 +16,11 @@ const experiences = [
   },
   {
     company: 'GirlScript Summer of Code',
-    role: ['Contributor', 'Ambassador'],
+    role: ['Contributor'],
     period: 'Apr 2026 - Present',
     location: 'Full-Time',
     points: [
       'Open Source Engineering: Actively contributing to high-impact projects by auditing codebases for vulnerabilities, proposing architectural enhancements, and delivering optimized pull requests.',
-      'Community Leadership: Serving as an official Ambassador to cultivate a robust open-source culture, providing technical mentorship to first-time contributors, and strategically expanding the GSSoC community footprint.',
     ],
   },
   {
