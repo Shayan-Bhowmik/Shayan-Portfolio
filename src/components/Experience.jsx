@@ -7,7 +7,7 @@ const experiences = [
   company: 'Kytes',
   role: ['AI Engineer'],
   period: 'June 2026 - Present',
-  location: Internship,
+  location: 'Internship',
   points: [
     'Architected and deployed an autonomous AI agent engineered to streamline complex workflows and enhance data-driven decision-making processes.',
     'Integrated Large Language Models (LLMs) and specialized prompt frameworks, optimizing the agent’s contextual understanding and response accuracy.',
