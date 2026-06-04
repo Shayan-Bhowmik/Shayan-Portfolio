@@ -24,7 +24,7 @@ const skills = [
   },
   {
     title: 'Other Skills',
-    items: ['Quantum Computation', 'Blockchain', 'Linux', 'System Design', 'Open-Source'],
+    items: ['Quantum Computation', 'Blockchain', 'Linux', 'System Design'],
   },
   
 ];
