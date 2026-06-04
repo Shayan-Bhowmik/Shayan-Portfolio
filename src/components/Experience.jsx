@@ -4,6 +4,17 @@ import { SectionFrame, SectionHeading } from './SectionFrame';
 
 const experiences = [
   {
+  company: 'Kytes',
+  role: ['AI Engineer'],
+  period: 'June 2026 - Present',
+  location: Internship,
+  points: [
+    'Architected and deployed an autonomous AI agent engineered to streamline complex workflows and enhance data-driven decision-making processes.',
+    'Integrated Large Language Models (LLMs) and specialized prompt frameworks, optimizing the agent’s contextual understanding and response accuracy.',
+    'Collaborated with the engineering team to design robust backend pipelines, ensuring seamless model deployment, low-latency API communication, and scalable performance.'
+  ],
+  },
+  {
     company: 'Google',
     role: ['Student Ambassador'],
     period: 'May 2026 - Present',
@@ -21,16 +32,6 @@ const experiences = [
     location: 'Full-Time',
     points: [
       'Open Source Engineering: Actively contributing to high-impact projects by auditing codebases for vulnerabilities, proposing architectural enhancements, and delivering optimized pull requests.',
-    ],
-  },
-  {
-    company: 'Nexus Spring of Code',
-    role: 'Contributor',
-    period: 'Apr 2026 - Present',
-    location: 'Full-Time',
-    points: [
-      'System Architecture & Development: Contributing to the core architecture of open-source projects by implementing scalable features and optimizing existing codebase performance.',
-      'Quality Assurance: Streamlining project reliability through detailed code reviews, comprehensive bug tracking, and the integration of robust testing protocols.',
     ],
   },
   {
