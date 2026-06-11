@@ -12,7 +12,7 @@ const skills = [
   },
   {
     title: 'Tools & DevOps',
-    items: ['Git', 'GitHub', 'Vercel', 'Postman', 'Figma', 'Canva', 'VS Code', 'Notion'],
+    items: ['Git', 'GitHub', 'Vercel', 'Postman', 'Figma', 'Canva', 'Docker', 'Notion'],
   },
   {
     title: 'Databases',
