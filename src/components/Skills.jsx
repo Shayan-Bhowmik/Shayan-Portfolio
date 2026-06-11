@@ -8,7 +8,7 @@ const skills = [
   },
   {
     title: 'Backend',
-    items: ['C++', 'Node.js', 'FLask', 'C#', 'Express.js', 'Java'],
+    items: ['C++', 'Node.js', 'Flask', 'C#', 'Express.js', 'Java'],
   },
   {
     title: 'Tools & DevOps',
