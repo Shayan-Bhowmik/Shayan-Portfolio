@@ -16,7 +16,7 @@ const skills = [
   },
   {
     title: 'Databases',
-    items: ['PostgreSQL', 'MongoDB', 'MySQL', 'Supabase'],
+    items: ['PostgreSQL', 'MySQL', 'Supabase'],
   },
   {
     title: 'AI Engineering',
