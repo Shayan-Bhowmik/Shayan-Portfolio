@@ -4,6 +4,13 @@ import { SectionFrame, SectionHeading } from './SectionFrame';
 
 const publications = [
   {
+    title: 'The Taxonomy of AI Agents',
+    venue: 'Medium - CodeX',
+    year: '2026',
+    url: 'https://medium.com/codex/the-taxonomy-of-ai-agents-609cbbeb28df',
+    summary: 'What does this problem actually need? A brain? Hands? A plan? A team? Or a system that grows its own team as it goes?',
+  },
+  {
     title: 'If It Works, Do We Need to Understand It?',
     venue: 'Medium.com',
     year: '2026',
@@ -24,13 +31,6 @@ const publications = [
     year: '2026',
     url: 'https://medium.com/@shayan.bhowmik/prompt-engineering-a-complete-practical-guide-a42a6734549a',
     summary: 'What learning to ask clearer questions taught me about thinking, communication, and working with AI.',
-  },
-  {
-    title: 'How I improved my Coding Skills in 30 Days as a College Student',
-    venue: 'Medium.com',
-    year: '2025',
-    url: 'https://medium.com/@shayan.bhowmik/how-i-improved-my-coding-skills-in-30-days-as-a-college-student-f8a39aabacb3',
-    summary: 'A simple four week system that rebuilt my fundamentals and gave me real coding confidence.',
   },
 ];
 
