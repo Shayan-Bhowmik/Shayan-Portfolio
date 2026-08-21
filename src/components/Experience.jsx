@@ -5,8 +5,8 @@ import { SectionFrame, SectionHeading } from './SectionFrame';
 const experiences = [
   {
   company: 'Kytes',
-  role: ['AI Engineer'],
-  period: 'June 2026 - Present',
+  role: ['SDE Intern'],
+  period: 'June 2026 - July2026',
   location: 'Internship',
   points: [
     'Architected and deployed an autonomous AI agent engineered to streamline complex workflows and enhance data-driven decision-making processes.',
@@ -17,7 +17,7 @@ const experiences = [
   {
     company: 'Google',
     role: ['Student Ambassador'],
-    period: 'May 2026 - Present',
+    period: 'May 2026 - August 2026',
     location: 'Internship ',
     points: [
       'Represented Google Gemini on campus by promoting Google products, tools, and developer programs to the student community at SIT.',
