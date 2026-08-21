@@ -78,8 +78,8 @@ export default function Hero() {
               <ArrowRight size={18} />
             </a>
             <a
-              href="/resume.pdf"
-              download="Shayan_Bhowmik_Resume.pdf"
+              href="/Shayan_Resume2026.pdf"
+              download="Shayan_Resume2026.pdf"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-accent px-7 py-3.5 text-sm font-semibold text-text-base transition-colors duration-300 hover:bg-accent hover:text-white"
             >
               Download Resume
