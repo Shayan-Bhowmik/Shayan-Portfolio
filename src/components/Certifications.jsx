@@ -6,7 +6,7 @@ const certifications = [
   { name: 'Hashgraph Developer', issuer: 'The Hashgraph Association', date: '2025', url: 'https://certs.hashgraphdev.com/453afbe9-5b53-4a92-aca0-b3690c305aea.pdf' },
   { name: 'Python', issuer: 'HackerRank', date: '2025', url: 'https://www.hackerrank.com/certificates/iframe/b6a61b5d0032' },
   { name: 'Introduction to Prompt Engineering', issuer: 'Microsoft', date: '2025', url: '' },
-  { name: 'Introduction to Generative AI', issuer: 'Google', date: '2025', url: '' },
+  { name: 'Introduction to Networks', issuer: 'Google', date: '2025', url: 'https://www.credly.com/badges/0f8c1d9f-e799-45f3-bf3d-c50838e27faa/public_url' },
 ];
 
 export default function Certifications() {
