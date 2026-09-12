@@ -8,6 +8,11 @@ const projects = [
     description: 'An Explainable Deep Learning framework combining CNN-based Brain MRI classification with GradCAM Heatmaps bridging high performance AI with Clinical Interpretability for Transparent, Trustworthy Disease Detection.',
     tech: ['Python', 'PyTorch', 'Pandas', 'NumPy', 'scikit-learn', 'NiBabel', 'Matplotlib'],
   },
+  {
+    title: 'HybridRAG - RAG Pipeline with Hybrid Search',
+    description: 'A Retrieval Augmented Generation System that answers questions grounded in a private document corpus.',
+    tech: ['Python', 'FastAPI', 'Next.js', 'PostgreSQL', 'Supabase', 'pgvector', 'BM25', 'Sentence Transformers', 'Cross-Encoder']
+  },
 ];
 
 export default function Projects() {
